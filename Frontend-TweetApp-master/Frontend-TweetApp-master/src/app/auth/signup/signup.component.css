@@ -1,0 +1,15 @@
+.register-section {
+  margin: 100px;
+}
+a {
+  color: #2c87f0;
+}
+a:visited {
+  color: #636;
+}
+a:hover, a:active, a:focus {
+  color:#c33;
+}
+.pointer-link {
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<!-- Display Posts-->
+<div class="row post" *ngFor="let post of posts">
+  <!-- Section to Display Post Information-->
+  <div class="col-md-11">
+    <img class="account-icon" src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+      <span><a class="username">{{post.user.userName}}</a></span>
+      <span> Posted {{post.createdDate| daysAgo}}</span>
+      <hr />
+    <div class="post-title">
+      <a class="postname">{{post.tweetName}}</a>
+    </div>
+    <div>
+      <p class="post-text" [innerHtml]="post.description"></p>
+    </div>
+    <hr />
+    <span>
+      <a class="btnCommments" role="button" (click)="likePost(post.tweetId)">
+        <fa-icon [icon]="faThumbsUp"></fa-icon>
+        Likes({{post.voteCount}})   
+      </a>
+      <button class="login" (click)="goToPost(post.tweetId)">
+        Read Post
+      </button>
+      <button class="login" (click)="updatePost(post.tweetId)">
+        Update Post
+      </button>
+      <button class="login" routerLink="/" (click)="deletePost(post.tweetId)">
+        Delete Post
+      </button>
+    </span>
+  </div>
+</div>

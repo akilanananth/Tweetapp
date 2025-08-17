@@ -1,0 +1,11 @@
+<!-- Display Posts-->
+<div class="row post" *ngFor="let user of users">
+    <!-- Section to Display Post Information-->
+    <div class="col-md-11">
+        <span><a class="username">{{user.userName}}</a></span><br>
+        <span> {{user.email}}</span><br>
+        <span>{{user.contactNumber}}</span><br>
+      <hr />
+    </div>
+  </div>
+  
